@@ -1,0 +1,7 @@
+{
+  "name": "WatchPay",
+  "description": "Telegram Mini App user panel for WatchPay with ad rewards, tasks, referrals, and secure withdrawals.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

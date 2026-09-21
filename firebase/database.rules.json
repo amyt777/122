@@ -1,0 +1,63 @@
+{
+  "rules": {
+    "settings": {
+      ".read": true,
+      ".write": false
+    },
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "transactions": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "withdrawals": {
+      ".read": false,
+      "$withdrawalId": {
+        ".read": "auth != null && data.child('userId').val() == auth.uid",
+        ".write": false
+      }
+    },
+    "referrals": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "adSessions": {
+      ".read": false,
+      ".write": false
+    },
+    "adWatchHistory": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "dailyBonus": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "tasks": {
+      ".read": true,
+      ".write": false
+    },
+    "taskClaims": {
+      "$uid": {
+        ".read": "auth != null && auth.uid == $uid",
+        ".write": false
+      }
+    },
+    "auditLogs": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}
